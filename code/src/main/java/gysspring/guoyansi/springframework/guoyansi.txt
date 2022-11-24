@@ -1,0 +1,9 @@
+provider  提供者
+Generic  通常的
+startup 启动
+step 步骤
+scanning 扫描
+Candidate 候选的
+Component 部件
+
+context 的无参构造函数-->ClassPathBeanDefinitionScanner()-->registerDefaultFilters()
