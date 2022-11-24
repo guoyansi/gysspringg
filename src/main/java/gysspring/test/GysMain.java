@@ -4,9 +4,9 @@ import gysspring.guoyansi.springframework.context.annotation.GysAnnotationConfig
 import org.springframework.util.Assert;
 
 public class GysMain {
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         test2();
-    }*/
+    }
 
     private static void test1(){
         GysAnnotationConfigApplicationContext context = new GysAnnotationConfigApplicationContext(TestCompent.class);
