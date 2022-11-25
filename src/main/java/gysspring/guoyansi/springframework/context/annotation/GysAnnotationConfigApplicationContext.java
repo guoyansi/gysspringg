@@ -7,12 +7,13 @@ public class GysAnnotationConfigApplicationContext extends GysGenericApplication
 
     private final GysAnnotatedBeanDefinitionReader reader;
 
-    //private final
+    private final GysClassPathBeanDefinitionScanner scanner;
 
     public GysAnnotationConfigApplicationContext() {
         GysStartupStep createAnnotatedBeanDefReader = this.getApplicationStartup().start("spring.context.annotated-bean-reader.create");
         this.reader=new GysAnnotatedBeanDefinitionReader(this);
         createAnnotatedBeanDefReader.end();
+        this.scanner=new GysClassPathBeanDefinitionScanner(this);
     }
     public GysAnnotationConfigApplicationContext(Class<?>... componentClasses) {
        this();

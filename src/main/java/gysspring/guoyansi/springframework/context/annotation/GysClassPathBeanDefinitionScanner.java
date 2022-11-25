@@ -22,17 +22,14 @@ public class GysClassPathBeanDefinitionScanner extends GysClassPathScanningCandi
         this(registry,useDefaultFilters, MyTool.getOrCreateEnvironment(registry));
     }
     public GysClassPathBeanDefinitionScanner(GysBeanDefinitionRegistry registry,boolean useDefaultFilters,GysEnvironment environment) {
-        //todo gys 最后一个参数和源码不一致，根据情况在决定是否完善
-        this(registry,useDefaultFilters, environment,null);
+        this(registry,useDefaultFilters, environment,(GysResourceLoader) registry);
     }
     public GysClassPathBeanDefinitionScanner(GysBeanDefinitionRegistry registry, boolean useDefaultFilters, GysEnvironment environment, GysResourceLoader resourceLoader) {
        this.registry=registry;
         if (useDefaultFilters) {
-            //todo gys 待继续填充
             super.registerDefaultFilters();
         }
-        setEnvironment(environment);
-
-        setResourceLoader(resourceLoader);
+        super.setEnvironment(environment);
+        super.setResourceLoader(resourceLoader);
     }
 }

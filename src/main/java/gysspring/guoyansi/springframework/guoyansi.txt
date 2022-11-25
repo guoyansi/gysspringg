@@ -5,5 +5,12 @@ step 步骤
 scanning 扫描
 Candidate 候选的
 Component 部件
+hierarchy 层次体系
+traversing 横穿
+stereotype使成为一套
+consider 考虑
+Evaluator 鉴别器
+Pattern 模型，样板
+
 
 context 的无参构造函数-->ClassPathBeanDefinitionScanner()-->registerDefaultFilters()

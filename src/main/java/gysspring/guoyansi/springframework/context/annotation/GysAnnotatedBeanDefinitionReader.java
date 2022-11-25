@@ -12,7 +12,7 @@ public class GysAnnotatedBeanDefinitionReader {
     /*public GysAnnotatedBeanDefinitionReader() {
     }*/
     public GysAnnotatedBeanDefinitionReader(GysBeanDefinitionRegistry registry) {
-        this(registry, MyTool.getOrCreateEnvironment(registry));
+        this(registry, getOrCreateEnvironment(registry));
     }
     public GysAnnotatedBeanDefinitionReader(GysBeanDefinitionRegistry registry, GysEnvironment environment) {
         GysAssert.notNull(registry,"GysBeanDefinitionRegistry 不能为空");
@@ -21,10 +21,7 @@ public class GysAnnotatedBeanDefinitionReader {
     }
 
     private static GysEnvironment getOrCreateEnvironment(GysBeanDefinitionRegistry registry){
-        GysAssert.notNull(registry,"GysBeanDefinitionRegistry 不能为空");
-
-
-
+        return MyTool.getOrCreateEnvironment(registry);
     }
 
 }

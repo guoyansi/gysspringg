@@ -10,6 +10,7 @@ public class MyTool {
 
     public static GysEnvironment getOrCreateEnvironment(GysBeanDefinitionRegistry registry) {
         Assert.notNull(registry, "BeanDefinitionRegistry must not be null");
+        //todo 被注释的
         /*if (registry instanceof EnvironmentCapable) {
             return ((EnvironmentCapable) registry).getEnvironment();
         }*/
